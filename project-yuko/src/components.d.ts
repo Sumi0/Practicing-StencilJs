@@ -20,6 +20,10 @@ export namespace Components {
          */
         "middle": string;
     }
+    interface YukoHeader {
+        "icon": string;
+        "nickname": string;
+    }
     interface YukoIcon {
         "icon": string;
     }
@@ -31,6 +35,12 @@ declare global {
         prototype: HTMLMyComponentElement;
         new (): HTMLMyComponentElement;
     };
+    interface HTMLYukoHeaderElement extends Components.YukoHeader, HTMLStencilElement {
+    }
+    var HTMLYukoHeaderElement: {
+        prototype: HTMLYukoHeaderElement;
+        new (): HTMLYukoHeaderElement;
+    };
     interface HTMLYukoIconElement extends Components.YukoIcon, HTMLStencilElement {
     }
     var HTMLYukoIconElement: {
@@ -39,6 +49,7 @@ declare global {
     };
     interface HTMLElementTagNameMap {
         "my-component": HTMLMyComponentElement;
+        "yuko-header": HTMLYukoHeaderElement;
         "yuko-icon": HTMLYukoIconElement;
     }
 }
@@ -57,11 +68,16 @@ declare namespace LocalJSX {
          */
         "middle"?: string;
     }
+    interface YukoHeader {
+        "icon"?: string;
+        "nickname"?: string;
+    }
     interface YukoIcon {
         "icon"?: string;
     }
     interface IntrinsicElements {
         "my-component": MyComponent;
+        "yuko-header": YukoHeader;
         "yuko-icon": YukoIcon;
     }
 }
@@ -70,6 +86,7 @@ declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
             "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
+            "yuko-header": LocalJSX.YukoHeader & JSXBase.HTMLAttributes<HTMLYukoHeaderElement>;
             "yuko-icon": LocalJSX.YukoIcon & JSXBase.HTMLAttributes<HTMLYukoIconElement>;
         }
     }

@@ -1,0 +1,20 @@
+.wrapper{
+  height: 100px;
+  top: 0px;
+  width: 100%;  
+  border: 1px black solid;  
+  .display {
+    justify-content: right;
+    margin-right: 50px;
+    .icon-image {
+      height: 30px;
+      width: 30px;  
+      background-color: magenta; 
+      font-size: 40px !important;    
+    }
+    .user {
+      font-size: 14px;
+
+    }
+  }
+}
