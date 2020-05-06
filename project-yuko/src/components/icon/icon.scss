@@ -1,0 +1,16 @@
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+
+i {
+  &.material-icons {
+    display: flex;       
+    font-size: inherit;
+    color: inherit;
+    font-weight: inherit;
+  }
+  &[class^="hp-icon"] {
+    font-size: inherit;
+    color: inherit;
+    font-weight: inherit;
+  }
+ 
+}
