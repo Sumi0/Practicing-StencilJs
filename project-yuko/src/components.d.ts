@@ -6,19 +6,11 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
-    interface MyComponent {
-        /**
-          * The first name
-         */
-        "first": string;
-        /**
-          * The last name
-         */
-        "last": string;
-        /**
-          * The middle name
-         */
-        "middle": string;
+    interface YukoButton {
+        "cancel": boolean;
+        "size": "medium" | "small" | "root";
+        "submit": boolean;
+        "validate": boolean;
     }
     interface YukoHeader {
         "icon": string;
@@ -27,13 +19,15 @@ export namespace Components {
     interface YukoIcon {
         "icon": string;
     }
+    interface YukoSidePanel {
+    }
 }
 declare global {
-    interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {
+    interface HTMLYukoButtonElement extends Components.YukoButton, HTMLStencilElement {
     }
-    var HTMLMyComponentElement: {
-        prototype: HTMLMyComponentElement;
-        new (): HTMLMyComponentElement;
+    var HTMLYukoButtonElement: {
+        prototype: HTMLYukoButtonElement;
+        new (): HTMLYukoButtonElement;
     };
     interface HTMLYukoHeaderElement extends Components.YukoHeader, HTMLStencilElement {
     }
@@ -47,26 +41,25 @@ declare global {
         prototype: HTMLYukoIconElement;
         new (): HTMLYukoIconElement;
     };
+    interface HTMLYukoSidePanelElement extends Components.YukoSidePanel, HTMLStencilElement {
+    }
+    var HTMLYukoSidePanelElement: {
+        prototype: HTMLYukoSidePanelElement;
+        new (): HTMLYukoSidePanelElement;
+    };
     interface HTMLElementTagNameMap {
-        "my-component": HTMLMyComponentElement;
+        "yuko-button": HTMLYukoButtonElement;
         "yuko-header": HTMLYukoHeaderElement;
         "yuko-icon": HTMLYukoIconElement;
+        "yuko-side-panel": HTMLYukoSidePanelElement;
     }
 }
 declare namespace LocalJSX {
-    interface MyComponent {
-        /**
-          * The first name
-         */
-        "first"?: string;
-        /**
-          * The last name
-         */
-        "last"?: string;
-        /**
-          * The middle name
-         */
-        "middle"?: string;
+    interface YukoButton {
+        "cancel"?: boolean;
+        "size"?: "medium" | "small" | "root";
+        "submit"?: boolean;
+        "validate"?: boolean;
     }
     interface YukoHeader {
         "icon"?: string;
@@ -75,19 +68,23 @@ declare namespace LocalJSX {
     interface YukoIcon {
         "icon"?: string;
     }
+    interface YukoSidePanel {
+    }
     interface IntrinsicElements {
-        "my-component": MyComponent;
+        "yuko-button": YukoButton;
         "yuko-header": YukoHeader;
         "yuko-icon": YukoIcon;
+        "yuko-side-panel": YukoSidePanel;
     }
 }
 export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
-            "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
+            "yuko-button": LocalJSX.YukoButton & JSXBase.HTMLAttributes<HTMLYukoButtonElement>;
             "yuko-header": LocalJSX.YukoHeader & JSXBase.HTMLAttributes<HTMLYukoHeaderElement>;
             "yuko-icon": LocalJSX.YukoIcon & JSXBase.HTMLAttributes<HTMLYukoIconElement>;
+            "yuko-side-panel": LocalJSX.YukoSidePanel & JSXBase.HTMLAttributes<HTMLYukoSidePanelElement>;
         }
     }
 }

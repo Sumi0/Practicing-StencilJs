@@ -2,7 +2,7 @@
   height: 70px; 
   top: 0px; 
   width: 100%;   
-  border: 1.2px black solid;   
+  border: 1.4px black solid;    
   border-radius: 10px; 
   display: flex;  
   justify-content: flex-end; 
@@ -16,13 +16,12 @@
     .icon-image { 
       height: fit-content;
       width: fit-content;  
-      // background-color: magenta; 
       font-size: 40px !important;      
     }
     .user {
       font-size: 14px;
       padding-top: 2px;  
-
+      color: #767676; 
     }
   }
 }
