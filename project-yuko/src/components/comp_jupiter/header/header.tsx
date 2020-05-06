@@ -5,7 +5,7 @@ import { Component, h, Prop } from "@stencil/core";
   styleUrl: "header.scss"
 })
 export class YukoHeader {
-	@Prop() nickname: string = null;
+	@Prop() username: string = "User";  
 	@Prop() icon: string = "supervised_user_circle";
 
   render() {
@@ -15,7 +15,7 @@ export class YukoHeader {
 					<div class="icon-image"> 
 						<yuko-icon icon={this.icon}></yuko-icon>
 					</div>
-					<div class="user"> {this.nickname} </div>
+					<div class="user"> {this.username} </div> 
 				</div>
 			</div>			
 		);

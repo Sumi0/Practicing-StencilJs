@@ -22,7 +22,7 @@ export namespace Components {
     }
     interface YukoHeader {
         "icon": string;
-        "nickname": string;
+        "username": string;
     }
     interface YukoIcon {
         "icon": string;
@@ -70,7 +70,7 @@ declare namespace LocalJSX {
     }
     interface YukoHeader {
         "icon"?: string;
-        "nickname"?: string;
+        "username"?: string;
     }
     interface YukoIcon {
         "icon"?: string;
