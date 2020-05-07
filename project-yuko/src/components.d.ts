@@ -19,7 +19,14 @@ export namespace Components {
     interface YukoIcon {
         "icon": string;
     }
+    interface YukoMainContent {
+    }
+    interface YukoProfileDetail {
+        "username": any;
+    }
     interface YukoSidePanel {
+    }
+    interface YukoTag {
     }
 }
 declare global {
@@ -41,17 +48,38 @@ declare global {
         prototype: HTMLYukoIconElement;
         new (): HTMLYukoIconElement;
     };
+    interface HTMLYukoMainContentElement extends Components.YukoMainContent, HTMLStencilElement {
+    }
+    var HTMLYukoMainContentElement: {
+        prototype: HTMLYukoMainContentElement;
+        new (): HTMLYukoMainContentElement;
+    };
+    interface HTMLYukoProfileDetailElement extends Components.YukoProfileDetail, HTMLStencilElement {
+    }
+    var HTMLYukoProfileDetailElement: {
+        prototype: HTMLYukoProfileDetailElement;
+        new (): HTMLYukoProfileDetailElement;
+    };
     interface HTMLYukoSidePanelElement extends Components.YukoSidePanel, HTMLStencilElement {
     }
     var HTMLYukoSidePanelElement: {
         prototype: HTMLYukoSidePanelElement;
         new (): HTMLYukoSidePanelElement;
     };
+    interface HTMLYukoTagElement extends Components.YukoTag, HTMLStencilElement {
+    }
+    var HTMLYukoTagElement: {
+        prototype: HTMLYukoTagElement;
+        new (): HTMLYukoTagElement;
+    };
     interface HTMLElementTagNameMap {
         "yuko-button": HTMLYukoButtonElement;
         "yuko-header": HTMLYukoHeaderElement;
         "yuko-icon": HTMLYukoIconElement;
+        "yuko-main-content": HTMLYukoMainContentElement;
+        "yuko-profile-detail": HTMLYukoProfileDetailElement;
         "yuko-side-panel": HTMLYukoSidePanelElement;
+        "yuko-tag": HTMLYukoTagElement;
     }
 }
 declare namespace LocalJSX {
@@ -68,13 +96,23 @@ declare namespace LocalJSX {
     interface YukoIcon {
         "icon"?: string;
     }
+    interface YukoMainContent {
+    }
+    interface YukoProfileDetail {
+        "username"?: any;
+    }
     interface YukoSidePanel {
+    }
+    interface YukoTag {
     }
     interface IntrinsicElements {
         "yuko-button": YukoButton;
         "yuko-header": YukoHeader;
         "yuko-icon": YukoIcon;
+        "yuko-main-content": YukoMainContent;
+        "yuko-profile-detail": YukoProfileDetail;
         "yuko-side-panel": YukoSidePanel;
+        "yuko-tag": YukoTag;
     }
 }
 export { LocalJSX as JSX };
@@ -84,7 +122,10 @@ declare module "@stencil/core" {
             "yuko-button": LocalJSX.YukoButton & JSXBase.HTMLAttributes<HTMLYukoButtonElement>;
             "yuko-header": LocalJSX.YukoHeader & JSXBase.HTMLAttributes<HTMLYukoHeaderElement>;
             "yuko-icon": LocalJSX.YukoIcon & JSXBase.HTMLAttributes<HTMLYukoIconElement>;
+            "yuko-main-content": LocalJSX.YukoMainContent & JSXBase.HTMLAttributes<HTMLYukoMainContentElement>;
+            "yuko-profile-detail": LocalJSX.YukoProfileDetail & JSXBase.HTMLAttributes<HTMLYukoProfileDetailElement>;
             "yuko-side-panel": LocalJSX.YukoSidePanel & JSXBase.HTMLAttributes<HTMLYukoSidePanelElement>;
+            "yuko-tag": LocalJSX.YukoTag & JSXBase.HTMLAttributes<HTMLYukoTagElement>;
         }
     }
 }

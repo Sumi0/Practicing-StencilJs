@@ -10,7 +10,7 @@ button {
   color: #767676;   
   text-align: center;
   font-weight: 500;  
-  outline: none;  
+  outline: none;
 }
 
 :host([size = "root"]) { 
@@ -56,14 +56,14 @@ button {
   button {
     border: none;  
     color: white; 
-    background-color: #d12c27;
+    background-color: rgb(219,40,68);  
   }
 }
 
 :host([submit]) {
   button {
     border: none;  
-    background-color: #66a52a;
+    background-color: rgb(50,166,75); 
     color: white; 
   }
 }

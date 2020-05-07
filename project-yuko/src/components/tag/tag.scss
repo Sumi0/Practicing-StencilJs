@@ -1,0 +1,18 @@
+.wrapper {  
+	padding: inherit; 
+	p {   
+		padding: 10px;
+		box-sizing: border-box;
+		border: none;
+		background-color: rgb(242,242,242); 
+		color: rgb(139,146,161);    
+		font-size: 15px;      
+		font-weight: bold;        
+		min-width: 50px; 
+		border-radius: 8px; 
+		min-width: 110px;     
+		width: fit-content; 
+		text-align: center; 
+		margin: 0;    
+	}
+}

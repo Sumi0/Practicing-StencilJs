@@ -1,0 +1,50 @@
+.wrapper {
+  right:0 !important;    
+  box-sizing: border-box;
+  padding: 50px 100px;  
+  width: fit-content; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  place-content: center;
+  margin: auto; 
+  .form{
+    border: 1.3px solid black; 
+    padding: 25px; 
+    margin-top: 15px;    
+    .main {  
+      width: 390px;         
+      padding: 25px 80px 25px 25px;     
+      display: flex;
+      justify-content: space-between;
+      .tags {
+        width: fit-content; 
+        yuko-tag {
+          padding: 16px 0;        
+        }
+      } 
+      form {
+        display: flex;
+        flex-direction: column; 
+        input {
+          width: 180px;
+          padding: 9px 20px;         
+          margin: 16px 0;       
+          box-sizing: border-box;
+          border: 1px solid rgb(77,77,77);     
+          border-radius: 4px;
+          font-size: 15px;   
+          font-family: inherit;  
+          outline: none; 
+        }
+      }
+    }
+    .buttons {
+      margin-top: 40px;   
+      text-align: right;
+      yuko-button:first-child { 
+        margin-right: 20px;   
+      }
+    }
+  }
+}
