@@ -5,12 +5,12 @@ import { Component, h, Prop } from "@stencil/core";
   styleUrl: "profile-detail.scss",     
   shadow: true
 })
-export class YukoDisplayContent {
-  @Prop() username; 
+export class YukoProfileDetail {
+  @Prop() username: string; 
 
   render() {
     
-    const title = "Characters may only contain alphabets, white-spaces not allowed at the beginning.";
+    const title = "Characters may only contain alphabets, white-spaces not allowed at the beginning. Max-length is 30 characters."; 
     const title_dob = "Enter date in given format only."
     return(
       <div class="wrapper"> 
@@ -24,10 +24,10 @@ export class YukoDisplayContent {
               <yuko-tag>Designation</yuko-tag>
             </div> 
             <form>
-              <input type="text" pattern="[a-zA-Z][a-zA-Z ]+" title={title}></input>    
+              <input type="text" pattern="[a-zA-Z][a-zA-Z ]+" title={title} maxlength="30"></input>    
               <input type="text" pattern="^\d{4}-\d{2}-\d{2}$" title={title_dob} placeholder="yyyy-mm-dd"></input>  
-              <input type="text" pattern="[a-zA-Z][a-zA-Z ]+" title={title}></input> 
-              <input type="text" pattern="[a-zA-Z][a-zA-Z ]+" title={title}></input> 
+              <input type="text" pattern="[a-zA-Z][a-zA-Z ]+" title={title} maxlength="30"></input> 
+              <input type="text" pattern="[a-zA-Z][a-zA-Z ]+" title={title} maxlength="30"></input>  
               <input type="submit" style={{display: "none"}}></input>    
             </form>
           </div> 

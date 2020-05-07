@@ -12,6 +12,8 @@ export namespace Components {
         "submit": boolean;
         "validate": boolean;
     }
+    interface YukoFullPage {
+    }
     interface YukoHeader {
         "icon": string;
         "username": string;
@@ -19,10 +21,10 @@ export namespace Components {
     interface YukoIcon {
         "icon": string;
     }
-    interface YukoMainContent {
+    interface YukoMainPage {
     }
     interface YukoProfileDetail {
-        "username": any;
+        "username": string;
     }
     interface YukoSidePanel {
     }
@@ -36,6 +38,12 @@ declare global {
         prototype: HTMLYukoButtonElement;
         new (): HTMLYukoButtonElement;
     };
+    interface HTMLYukoFullPageElement extends Components.YukoFullPage, HTMLStencilElement {
+    }
+    var HTMLYukoFullPageElement: {
+        prototype: HTMLYukoFullPageElement;
+        new (): HTMLYukoFullPageElement;
+    };
     interface HTMLYukoHeaderElement extends Components.YukoHeader, HTMLStencilElement {
     }
     var HTMLYukoHeaderElement: {
@@ -48,11 +56,11 @@ declare global {
         prototype: HTMLYukoIconElement;
         new (): HTMLYukoIconElement;
     };
-    interface HTMLYukoMainContentElement extends Components.YukoMainContent, HTMLStencilElement {
+    interface HTMLYukoMainPageElement extends Components.YukoMainPage, HTMLStencilElement {
     }
-    var HTMLYukoMainContentElement: {
-        prototype: HTMLYukoMainContentElement;
-        new (): HTMLYukoMainContentElement;
+    var HTMLYukoMainPageElement: {
+        prototype: HTMLYukoMainPageElement;
+        new (): HTMLYukoMainPageElement;
     };
     interface HTMLYukoProfileDetailElement extends Components.YukoProfileDetail, HTMLStencilElement {
     }
@@ -74,9 +82,10 @@ declare global {
     };
     interface HTMLElementTagNameMap {
         "yuko-button": HTMLYukoButtonElement;
+        "yuko-full-page": HTMLYukoFullPageElement;
         "yuko-header": HTMLYukoHeaderElement;
         "yuko-icon": HTMLYukoIconElement;
-        "yuko-main-content": HTMLYukoMainContentElement;
+        "yuko-main-page": HTMLYukoMainPageElement;
         "yuko-profile-detail": HTMLYukoProfileDetailElement;
         "yuko-side-panel": HTMLYukoSidePanelElement;
         "yuko-tag": HTMLYukoTagElement;
@@ -89,6 +98,8 @@ declare namespace LocalJSX {
         "submit"?: boolean;
         "validate"?: boolean;
     }
+    interface YukoFullPage {
+    }
     interface YukoHeader {
         "icon"?: string;
         "username"?: string;
@@ -96,10 +107,10 @@ declare namespace LocalJSX {
     interface YukoIcon {
         "icon"?: string;
     }
-    interface YukoMainContent {
+    interface YukoMainPage {
     }
     interface YukoProfileDetail {
-        "username"?: any;
+        "username"?: string;
     }
     interface YukoSidePanel {
     }
@@ -107,9 +118,10 @@ declare namespace LocalJSX {
     }
     interface IntrinsicElements {
         "yuko-button": YukoButton;
+        "yuko-full-page": YukoFullPage;
         "yuko-header": YukoHeader;
         "yuko-icon": YukoIcon;
-        "yuko-main-content": YukoMainContent;
+        "yuko-main-page": YukoMainPage;
         "yuko-profile-detail": YukoProfileDetail;
         "yuko-side-panel": YukoSidePanel;
         "yuko-tag": YukoTag;
@@ -120,9 +132,10 @@ declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
             "yuko-button": LocalJSX.YukoButton & JSXBase.HTMLAttributes<HTMLYukoButtonElement>;
+            "yuko-full-page": LocalJSX.YukoFullPage & JSXBase.HTMLAttributes<HTMLYukoFullPageElement>;
             "yuko-header": LocalJSX.YukoHeader & JSXBase.HTMLAttributes<HTMLYukoHeaderElement>;
             "yuko-icon": LocalJSX.YukoIcon & JSXBase.HTMLAttributes<HTMLYukoIconElement>;
-            "yuko-main-content": LocalJSX.YukoMainContent & JSXBase.HTMLAttributes<HTMLYukoMainContentElement>;
+            "yuko-main-page": LocalJSX.YukoMainPage & JSXBase.HTMLAttributes<HTMLYukoMainPageElement>;
             "yuko-profile-detail": LocalJSX.YukoProfileDetail & JSXBase.HTMLAttributes<HTMLYukoProfileDetailElement>;
             "yuko-side-panel": LocalJSX.YukoSidePanel & JSXBase.HTMLAttributes<HTMLYukoSidePanelElement>;
             "yuko-tag": LocalJSX.YukoTag & JSXBase.HTMLAttributes<HTMLYukoTagElement>;
