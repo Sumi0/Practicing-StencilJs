@@ -14,12 +14,16 @@ export namespace Components {
     }
     interface YukoHeader {
         "icon": string;
+        "show_side_panel": boolean;
         "username": string;
     }
     interface YukoIcon {
         "icon": string;
     }
     interface YukoMainPage {
+        "show_notification_section": boolean;
+        "show_panel": boolean;
+        "show_profile_section": boolean;
     }
     interface YukoProfileDetail {
         "notification": boolean;
@@ -102,12 +106,16 @@ declare namespace LocalJSX {
     }
     interface YukoHeader {
         "icon"?: string;
+        "show_side_panel"?: boolean;
         "username"?: string;
     }
     interface YukoIcon {
         "icon"?: string;
     }
     interface YukoMainPage {
+        "show_notification_section"?: boolean;
+        "show_panel"?: boolean;
+        "show_profile_section"?: boolean;
     }
     interface YukoProfileDetail {
         "notification"?: boolean;
