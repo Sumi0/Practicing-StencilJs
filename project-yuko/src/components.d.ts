@@ -12,8 +12,6 @@ export namespace Components {
         "submit": boolean;
         "validate": boolean;
     }
-    interface YukoFullPage {
-    }
     interface YukoHeader {
         "icon": string;
         "username": string;
@@ -24,11 +22,15 @@ export namespace Components {
     interface YukoMainPage {
     }
     interface YukoProfileDetail {
+        "notification": boolean;
+        "profile_info": boolean;
         "username": string;
     }
     interface YukoSidePanel {
     }
     interface YukoTag {
+    }
+    interface YukoToggle {
     }
 }
 declare global {
@@ -37,12 +39,6 @@ declare global {
     var HTMLYukoButtonElement: {
         prototype: HTMLYukoButtonElement;
         new (): HTMLYukoButtonElement;
-    };
-    interface HTMLYukoFullPageElement extends Components.YukoFullPage, HTMLStencilElement {
-    }
-    var HTMLYukoFullPageElement: {
-        prototype: HTMLYukoFullPageElement;
-        new (): HTMLYukoFullPageElement;
     };
     interface HTMLYukoHeaderElement extends Components.YukoHeader, HTMLStencilElement {
     }
@@ -80,15 +76,21 @@ declare global {
         prototype: HTMLYukoTagElement;
         new (): HTMLYukoTagElement;
     };
+    interface HTMLYukoToggleElement extends Components.YukoToggle, HTMLStencilElement {
+    }
+    var HTMLYukoToggleElement: {
+        prototype: HTMLYukoToggleElement;
+        new (): HTMLYukoToggleElement;
+    };
     interface HTMLElementTagNameMap {
         "yuko-button": HTMLYukoButtonElement;
-        "yuko-full-page": HTMLYukoFullPageElement;
         "yuko-header": HTMLYukoHeaderElement;
         "yuko-icon": HTMLYukoIconElement;
         "yuko-main-page": HTMLYukoMainPageElement;
         "yuko-profile-detail": HTMLYukoProfileDetailElement;
         "yuko-side-panel": HTMLYukoSidePanelElement;
         "yuko-tag": HTMLYukoTagElement;
+        "yuko-toggle": HTMLYukoToggleElement;
     }
 }
 declare namespace LocalJSX {
@@ -97,8 +99,6 @@ declare namespace LocalJSX {
         "size"?: "medium" | "small" | "root";
         "submit"?: boolean;
         "validate"?: boolean;
-    }
-    interface YukoFullPage {
     }
     interface YukoHeader {
         "icon"?: string;
@@ -110,21 +110,25 @@ declare namespace LocalJSX {
     interface YukoMainPage {
     }
     interface YukoProfileDetail {
+        "notification"?: boolean;
+        "profile_info"?: boolean;
         "username"?: string;
     }
     interface YukoSidePanel {
     }
     interface YukoTag {
     }
+    interface YukoToggle {
+    }
     interface IntrinsicElements {
         "yuko-button": YukoButton;
-        "yuko-full-page": YukoFullPage;
         "yuko-header": YukoHeader;
         "yuko-icon": YukoIcon;
         "yuko-main-page": YukoMainPage;
         "yuko-profile-detail": YukoProfileDetail;
         "yuko-side-panel": YukoSidePanel;
         "yuko-tag": YukoTag;
+        "yuko-toggle": YukoToggle;
     }
 }
 export { LocalJSX as JSX };
@@ -132,13 +136,13 @@ declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
             "yuko-button": LocalJSX.YukoButton & JSXBase.HTMLAttributes<HTMLYukoButtonElement>;
-            "yuko-full-page": LocalJSX.YukoFullPage & JSXBase.HTMLAttributes<HTMLYukoFullPageElement>;
             "yuko-header": LocalJSX.YukoHeader & JSXBase.HTMLAttributes<HTMLYukoHeaderElement>;
             "yuko-icon": LocalJSX.YukoIcon & JSXBase.HTMLAttributes<HTMLYukoIconElement>;
             "yuko-main-page": LocalJSX.YukoMainPage & JSXBase.HTMLAttributes<HTMLYukoMainPageElement>;
             "yuko-profile-detail": LocalJSX.YukoProfileDetail & JSXBase.HTMLAttributes<HTMLYukoProfileDetailElement>;
             "yuko-side-panel": LocalJSX.YukoSidePanel & JSXBase.HTMLAttributes<HTMLYukoSidePanelElement>;
             "yuko-tag": LocalJSX.YukoTag & JSXBase.HTMLAttributes<HTMLYukoTagElement>;
+            "yuko-toggle": LocalJSX.YukoToggle & JSXBase.HTMLAttributes<HTMLYukoToggleElement>;
         }
     }
 }

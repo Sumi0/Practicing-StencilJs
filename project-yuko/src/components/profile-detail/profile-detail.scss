@@ -15,6 +15,9 @@
       padding: 25px 80px 25px 25px;     
       display: flex;
       justify-content: space-between;
+      yuko-toggle {
+        padding: 16px 0;   
+      }
       .tags {
         width: fit-content; 
         yuko-tag {
@@ -44,5 +47,13 @@
         margin-right: 20px;   
       }
     }
+  }
+}
+
+:host([notification]) {
+  .wrapper .form .main {  
+    padding-right: 25px; 
+    .tags {
+    } 
   }
 }
