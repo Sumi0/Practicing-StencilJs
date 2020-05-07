@@ -14,8 +14,8 @@ export class YukoButton {
   render() {
     return (
       <button>
-        {/* <slot /> */}Cancel  
-      </button>
+       <slot />
+      </button> 
     );               
   }
 }

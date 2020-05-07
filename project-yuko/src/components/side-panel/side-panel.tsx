@@ -11,18 +11,18 @@ export class YukoSidePanel {
     return(
       <div class="wrapper">
         <div class="links"> 
-          <div id="profile">
-            <yuko-button size="root"></yuko-button>
-            <div> 
-              <yuko-button size="small"></yuko-button>
-              <yuko-button size="small"></yuko-button>
+          <div class="profile">   
+            <div id="b1"><yuko-button size="root">Profile</yuko-button></div>    
+            <div>   
+              <div id="b11"><yuko-button size="small">Settings</yuko-button></div>
+              <div id="b12"><yuko-button size="small">Notification</yuko-button></div>
             </div>
           </div> 
-          <div id="my-task"> 
-            <yuko-button size="root"></yuko-button>
+          <div class="my-task">   
+            <div id="b2"><yuko-button size="root">My Tasks</yuko-button></div>
             <div>
-              <yuko-button size="small"></yuko-button>
-              <yuko-button size="small"></yuko-button> 
+              <div id="b21"><yuko-button size="small">Task 1</yuko-button></div>
+              <div id="b22"><yuko-button size="small">Task 2</yuko-button></div> 
             </div>
           </div>
         </div>
