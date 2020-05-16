@@ -7,7 +7,7 @@ import { Component, h, Prop } from "@stencil/core";
 })
 export class YukoProfileDetail {
   @Prop() username: string; 
-  @Prop({reflect: true}) profile_info: boolean=true;     
+  @Prop({reflect: true}) profile_info: boolean;     
   @Prop({reflect: true}) notification: boolean;   
 
   render() {

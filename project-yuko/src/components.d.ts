@@ -22,7 +22,6 @@ export namespace Components {
     }
     interface YukoMainPage {
         "show_notification_section": boolean;
-        "show_panel": boolean;
         "show_profile_section": boolean;
     }
     interface YukoProfileDetail {
@@ -114,7 +113,6 @@ declare namespace LocalJSX {
     }
     interface YukoMainPage {
         "show_notification_section"?: boolean;
-        "show_panel"?: boolean;
         "show_profile_section"?: boolean;
     }
     interface YukoProfileDetail {
@@ -123,6 +121,8 @@ declare namespace LocalJSX {
         "username"?: string;
     }
     interface YukoSidePanel {
+        "onShow_notifications"?: (event: CustomEvent<any>) => void;
+        "onShow_profile"?: (event: CustomEvent<any>) => void;
     }
     interface YukoTag {
     }
